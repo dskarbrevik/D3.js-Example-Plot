@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>W209_Assignment3</title>
+        <script type="text/javascript" src="./d3/d3.js"></script>
+        <script type ="text/javascript" src="./js/linechart.js"></script>
+        <script type ="text/javascript" src="./js/test.js"></script>
+        
+        <style>
+            
+            h1, h3 {
+                font-family: 'Open Sans', sans-serif;
+                margin-left: "20px";
+                padding-left: "40px";
+            }
+            
+            p {
+                
+                font-family: 'Open Sans', sans-serif;
+                margin-top: "100px";
+            }
+            
+            text {
+                
+                font-family: 'Open Sans', sans-serif;
+
+                
+            }
+            
+            path {
+                stroke: steelblue;
+                stroke-width: 2;
+                fill: none;
+            }
+            
+            .axis path,
+            .axis line{
+                fill: none;
+                stroke: steelblue;
+                stroke-width: 1.5;
+
+            }
+            
+            button
+            {
+              height: 50px;
+              width: 125px;
+              background-color: steelblue;
+              border-color: white;
+              border-width: 2px;
+              border-style: solid;
+              border-radius: 12px;
+              border-spacing: 100px;
+              color: white;
+              font-size: 16px;
+              font-weight: bold;
+              vertical-align: middle;
+              margin-left: 10px;
+              margin-right: 10px;
+            }
+            
+            button:hover {
+                background-color: #e09224;
+                border-color: #e09224;
+                color: #334d66;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Visualizing Averages</h1>
+        
+        <p>This webpage was originally a static histogram showing the frequencies of 30 real die rolls. Though this webpage no longer uses "real" data (it's generated randomly), I think it's become much more interesting :)</p>
+        <br>
+        <h3>BEFORE YOU BEGIN!</h3>
+        <p><strong>Question 1:</strong></p>
+        <p>If you roll a die <i>many</i> times, what will the average value (whole number approximation) of your rolls be?</p>
+        <p><strong>Question 2:</strong></p>
+        <p>What did you imagine "many times" meant in question 1?</p>
+        <br>
+        <h3>Test your intuition:</h3>
+        <script src="./js/linechart.js"></script>
+
+        <div style="width:300px;">
+            <div style="float: left; width: 130px">
+                <button onclick="AddOne()">Roll a Die!</button>
+            </div>
+            <div style="float: right; width 225px">
+                <button onclick="Reset()">Reset</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <h3 id="roll"><br></h3>
+        <h3 id="avg"><br></h3>
+
+    </body>
+</html>
